@@ -14,6 +14,11 @@ The project must meet the following criteria:
 - Demonstrates all 4 CRUD interactions (user signup/login does not count towards this).
 - Demonstrates server-side error validation.
 
+
+## Link to Planning Document
+To be added
+
+
 ## Demo
 To be added
 

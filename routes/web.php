@@ -11,6 +11,74 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/items', 'ItemController@index')->name('items.index');
+Route::get('/items/create', 'ItemController@create')->name('items.create');
+Route::post('/items', 'ItemController@store')->name('items.store');
+Route::get('/items/{item}', 'ItemController@show')->name('items.show');
+Route::get('/items/{item}/edit', 'ItemController@edit')->name('items.edit');
+Route::put('/items/{item}', 'ItemController@update')->name('items.update');
+Route::delete('/items/{item}', 'ItemController@destroy')->name('items.destroy');
+
+
+
+//Route::get('/items/create', function() {
+
+//    $view  = '<form method="POST" action="/items/create">';
+//    $view .= csrf_field(); # This will be explained more later
+//    $view .= '<label>Title: <input type="text" name="title"></label>';
+//   $view .= '<input type="submit">';
+//    $view .= '</form>';
+//    return $view;
+
+//});
+
+
+//Route::post('/items/create', function() {
+//    return "Processing item now";
+
+//});
+
+
+//Route::get('/items/{description?}', function($description = '') {
+//    if ($description == '') {
+//    	return "You forgot the description.";
+//    }
+//    return "You requested this clothing item:".$description;
+//});
+
+
+Route::get('/debug', function() {
+
+    echo '<pre>';
+
+    echo '<h1>Environment</h1>';
+    echo App::environment().'</h1>';
+
+    echo '<h1>Debugging?</h1>';
+    if(config('app.debug')) echo "Yes"; else echo "No";
+
+    echo '<h1>Database Config</h1>';
+    /*
+    The following line will output your MySQL credentials.
+    Uncomment it only if you're having a hard time connecting to the database and you
+    need to confirm your credentials.
+    When you're done debugging, comment it back out so you don't accidentally leave it
+    running on your live server, making your credentials public.
+    */
+    //print_r(config('database.connections.mysql'));
+
+    echo '<h1>Test Database Connection</h1>';
+    try {
+        $results = DB::select('SHOW DATABASES;');
+        echo '<strong style="background-color:green; padding:5px;">Connection confirmed</strong>';
+        echo "<br><br>Your Databases:<br><br>";
+        print_r($results);
+    }
+    catch (Exception $e) {
+        echo '<strong style="background-color:crimson; padding:5px;">Caught exception: ', $e->getMessage(), "</strong>\n";
+    }
+
+    echo '</pre>';
+
 });

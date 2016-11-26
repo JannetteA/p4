@@ -1,0 +1,101 @@
+﻿/* Project 4 - Final  */
+
+
+header	{
+		width: 1000px;
+		background-color: white;
+		margin: auto;
+		padding-top: 25px;
+		padding-bottom: 20px;
+		text-align: center;
+}
+
+nav		{
+		margin: auto;
+		text-align: center;
+		padding-top: 20px;
+		width: 1000px;
+		background-color: #ffcccc;
+		height: 33px;
+}
+
+nav a   {
+		padding-right: 40px;
+}
+
+a 		{
+		color: #ff6666;
+		text-decoration: none;
+}
+
+a:hover {
+		color: #666666;
+		text-decoration: none;
+}
+
+a:active {
+		color: #ff6600;
+		text-decoration: none;
+}
+
+
+body {
+		font-family: Tahoma, Geneva, sans-serif;
+       	font-size: 85%;
+   		line-height: 1em;
+		background-color: #e6e6e6; 
+}
+
+
+.container  {
+		width: 1000px;   
+		min-height: 750px;
+		margin: auto;
+		margin-top: 0px;
+		padding-top: 0px;
+		text-align: center;
+		background-color: white;
+		color: #666666;
+ }
+
+ .content {
+ 		padding-top: 40px;
+ }
+
+section	{
+		margin-top: 0px;
+		padding-top: 0px;
+}
+
+footer 	{
+		font-size: 80%;
+		text-align: center;
+		padding-bottom: 30px;
+}
+
+
+h3		{
+		font-size: 90%;
+}
+
+p 		{
+		padding-left: 30px;
+		padding-right: 30px;
+}
+
+
+.error  {
+		color: red;
+		font-size: 80%;
+}
+
+ul      {
+		list-style-type: none;
+		color: red;
+}
+
+li      {
+		list-style-type: none;
+		color: red;
+}
+
