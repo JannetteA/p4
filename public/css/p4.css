@@ -53,13 +53,19 @@ body {
 		margin: auto;
 		margin-top: 0px;
 		padding-top: 0px;
-		text-align: center;
 		background-color: white;
 		color: #666666;
  }
 
  .content {
  		padding-top: 40px;
+ 		text-align: center;
+ }
+
+ .formcontent {
+ 		padding-top: 40px;
+ 		padding-left: 100px;
+ 		text-align: left;
  }
 
 section	{
@@ -73,6 +79,10 @@ footer 	{
 		padding-bottom: 30px;
 }
 
+.itemimgsize  {
+	    height: 15%;
+    	width: 15%;
+}
 
 h3		{
 		font-size: 90%;
@@ -99,3 +109,103 @@ li      {
 		color: red;
 }
 
+
+.form-group {
+		text-align: left;
+		padding-top: 10px;
+		padding-bottom: 10px;
+}
+
+
+label {
+    margin-top:10px;
+    margin-bottom:0;
+    display:block;
+    font-size:1em;
+    font-weight:bold;
+}
+
+fieldset label {
+    margin-top:0px;
+}
+
+legend {
+    margin-bottom:5px;
+    border-bottom:0px;
+}
+
+.checkboxLabel, .radioLabel {
+    display:inline;
+}
+
+.form-instructions {
+    margin:5px 0px;
+    color:grey;
+}
+
+input[type=text],input[type=password],select {
+    width:275px;
+
+}
+
+.flash_message {
+    width: 997px;
+    text-align:center;
+    padding:5px;
+    background-color:yellow;
+	margin: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	position: fixed;
+}
+
+/* clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1; /* For IE 6/7 only */
+}
+/* End clearfix */
+
+.item {
+    border:1px solid #ccc;
+    margin-right:10px;
+    margin-bottom:10px;
+    float:left;
+    padding:10px;
+    height:300px;
+    width:25%;
+    min-width:250px;
+}
+
+.tags {
+    margin-top:3px;
+}
+
+.tag {
+    background-color:#eee;
+    margin-bottom:5px;
+    display:inline-block;
+    padding:3px;
+    text-transform: uppercase;
+    font-size:.7em;
+}
+
+.truncate {
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cover {
+    width:100px;
+}

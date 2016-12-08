@@ -1,23 +1,36 @@
 @extends('master')
 
-@section('Items')
-	
-@stop
+@section('title')
 
 @section('head')
 	
-@stop
-
 @section('content')
+
 	
 	<div class="container">
 		
 		<div class="content">
 
-	    <section>
-	        <span> Show item: {{ $item }} </span>
-	        <!--<span> Show item: <?php echo $item ?></span>-->
-	    </section>
+				<h1>{{ $item->description }}</h1>
+				
+				<!-- need to get brand  -->
+
+
+				<img src='{{ $item->image_link }}'>
+
+				<div >
+			        @foreach($item->tags as $tag)
+			            <div>{{ $tag->name }}</div>
+			        @endforeach
+			    </div>
+
+			    <a class='button' href='/items/{{ $item->id }}/edit'>Edit</a>
+			    <a class='button' href='/items/{{ $item->id }}/delete'>Delete</a>
+
+			    <br><br>
+			    <a class='return' href='/items'>&larr; Return to all items</a>
+
+			    			    
 
 	    </div>
 	

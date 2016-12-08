@@ -25,7 +25,6 @@ class CreateItemsTable extends Migration
 
         # The rest of the fields...
         $table->string('description');
-        $table->string('brand')->nullable();          
         $table->integer('purchased_year')->nullable(); 
         $table->string('material')->nullable(); 
         $table->decimal('estimated_price');

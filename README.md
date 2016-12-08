@@ -28,4 +28,5 @@ To be added
 
 
 ## Outside code
-To be added
+In order to create this application, I watched all the lecture videos again, starting with lecture 5.  I created my p4 Laravel application and I followed the videos step by step to build the application for p4.  
+

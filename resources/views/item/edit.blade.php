@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('title')
-	
+
 @section('head')
 	
 @section('content')
@@ -10,11 +10,17 @@
 		
 		<div class="formcontent">
 
-		<h2>Add a new clothing item</h2>
+		<h2>Edit a clothing item</h2>
 		
-		<form method="POST" action="/items">
-		
-			{{ csrf_field() }}
+    	<form method='POST' action='/items/{{ $item->id }}'>
+
+        	{{ method_field('PUT') }}
+
+       		{{ csrf_field() }}
+
+
+			<input name='id' value='{{$item->id}}' type='hidden'>
+
 
 			<div class="form-group">
 				<label>Description</label>
@@ -22,22 +28,30 @@
 					 type="text"
 					 id="description"
 					 name="description"
-					 value="{{ old('description') }}">
+					 value="{{ old('description',$item->description) }}">
 
 				<div class="error">{{ $errors->first('description') }}</div>
 			</div>
 
 
 			<div class='form-group'>
-            	<label>Brand</label>
-            		<select name='brand_id'>
-               		@foreach($brands_for_dropdown as $brand_id => $brand)
-                    	<option
-                    	value='{{ $brand_id }}'
-                    	>{{ $brand }}</option>
-               		@endforeach
-            	</select>
-        	</div>
+	            <label>Brand</label>
+
+	            <select name="brand_id">
+	      
+     				@foreach( $brands_for_dropdown as $brand_id => $brand) {
+
+					    <option
+	                    {{ ($brand_id == $item->brand_id) ? 'SELECTED' : '' }}
+	                    value='{{ $brand_id }}'
+	                    >{{ $brand }}</option>
+						  
+					@endforeach
+									
+				</select>
+
+	        </div>
+
 
 
 
@@ -47,7 +61,8 @@
 					 type="text"
 					 id="purchased_year"
 					 name="purchased_year"
-					 value="{{ old('purchased_year') }}">
+					 value="{{ old('purchased_year',$item->purchased_year) }}">
+				
 
 				<div class="error">{{ $errors->first('purchased_year') }}</div>
 			</div>
@@ -59,7 +74,7 @@
 					 type="text"
 					 id="material"
 					 name="material"
-					 value="{{ old('material') }}">
+					 value="{{ old('material',$item->material) }}">
 
 				<div class="error">{{ $errors->first('material') }}</div>
 			</div>
@@ -71,10 +86,11 @@
 					 type="text"
 					 id="estimated_price"
 					 name="estimated_price"
-					 value="{{ old('estimated_price') }}">
+					 value="{{ old('estimated_price',$item->estimated_price) }}">
 
 				<div class="error">{{ $errors->first('estimated_price') }}</div>
 			</div>
+
 
 			<div class="form-group">
 				<label>Image Link</label>
@@ -82,27 +98,31 @@
 					 type="text"
 					 id="image_link"
 					 name="image_link"
-					 value="{{ old('image_link') }}">
+					 value="{{ old('image_link',$item->image_link) }}">
 
 				<div class="error">{{ $errors->first('image_link') }}</div>
 			</div>
 
-		
-			<div class='form-group'>
+			
+	        <div class='form-group'>
 	            <label>Tags</label>
-	            @foreach($tags_for_checkboxes as $tag_id => $tag_name)
-	                <input type='checkbox' value='{{ $tag_id }}' name='tags[]'> {{ $tag_name }} <br>
+	            @foreach( $tags_for_checkboxes as $tag_id => $tag_name) 
+	                <input
+	                type='checkbox'  value='{{ $tag_id }}'  name='tags[]'
+	                {{ (in_array($tag_name, $tags_for_the_item)) ? 'CHECKED' : '' }}
+	                >
+	                {{ $tag_name }} <br>
 	            @endforeach
-	        </div
+	        </div>
 
-
+		
 
 	        <div class="form-instructions">
 	            All fields are required
 	        </div>
 
 
-	        <button type="submit" class="btn btn-primary">Add clothing item</button>
+	        <button type="submit" class="btn btn-primary">Edit the clothing item</button>
 
 
 			<div class="error"

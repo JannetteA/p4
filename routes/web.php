@@ -12,40 +12,16 @@
 */
 
 
-Route::get('/items', 'ItemController@index')->name('items.index');
-Route::get('/items/create', 'ItemController@create')->name('items.create');
+Route::get('/items', 'ItemController@index')->name('items.index')->middleware('auth');
+Route::get('/items/create', 'ItemController@create')->name('items.create')->middleware('auth');
 Route::post('/items', 'ItemController@store')->name('items.store');
 Route::get('/items/{item}', 'ItemController@show')->name('items.show');
-Route::get('/items/{item}/edit', 'ItemController@edit')->name('items.edit');
-Route::put('/items/{item}', 'ItemController@update')->name('items.update');
+Route::get('/items/{id}/edit', 'ItemController@edit')->name('items.edit');
+Route::put('/items/{id}', 'ItemController@update')->name('items.update');
+Route::get('/items/{id}/delete', 'ItemController@delete')->name('items.destroy');
 Route::delete('/items/{item}', 'ItemController@destroy')->name('items.destroy');
 
 
-
-//Route::get('/items/create', function() {
-
-//    $view  = '<form method="POST" action="/items/create">';
-//    $view .= csrf_field(); # This will be explained more later
-//    $view .= '<label>Title: <input type="text" name="title"></label>';
-//   $view .= '<input type="submit">';
-//    $view .= '</form>';
-//    return $view;
-
-//});
-
-
-//Route::post('/items/create', function() {
-//    return "Processing item now";
-
-//});
-
-
-//Route::get('/items/{description?}', function($description = '') {
-//    if ($description == '') {
-//    	return "You forgot the description.";
-//    }
-//    return "You requested this clothing item:".$description;
-//});
 
 
 Route::get('/debug', function() {
@@ -82,3 +58,12 @@ Route::get('/debug', function() {
     echo '</pre>';
 
 });
+
+Route::get('/', 'PageController@welcome');
+
+#Generates a lot of routes
+Auth::routes();
+#This overwrites the previous line, takes precedence
+Route::get('/logout','Auth\LoginController@logout')->name('logout');
+
+#Route::get('/home', 'HomeController@index');

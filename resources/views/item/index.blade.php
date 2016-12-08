@@ -1,44 +1,31 @@
 @extends('master')
 
-@section('Document this piece')
-	
-@stop
+@section('title')
 
 @section('head')
 	
-@stop
-
 @section('content')
 	
+	<div class="container">
+		
+		<div class="content">
 
-    <div class="container">
-        
-        <div class="content">
+		<h1>All the clothing items</h1>
 
-        <section>
-            <span>Text could go here </span>
+			@foreach($items as $item)
 
-            <!-- The form and error handling starts here -->
-            <form method='POST' action='/ipsum'>
-            {{ csrf_field() }}
-            <input type="text" maxlength="2" name='HowManyParagraphs' value="1">
-            <input type='submit' value='Submit'>
-            </form>
+	           	<a href="/items/{{ $item->id }}"><h3 class="truncate">{{ $item->description }}</h3></a>
 
-            @if(count($errors) > 0)
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            @endif
+	           
+	                <a class='button' href='/items/{{ $item->id }}/edit'>Edit</a>
+	                <a class='button' href='/items/{{ $item->id }}'>View</a>
+	                <a class='button' href='/items/{{ $item->id }}/delete'>Delete</a>
 
-        </section>
-    
-        </div>
-        
+	         @endforeach
+	   
+
+	    </div>
+	
     </div>
-    
- 
 
 @endsection
