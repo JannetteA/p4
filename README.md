@@ -44,8 +44,8 @@ password:  helloworld
 ## Outside code
 In order to create this application, I watched all the lecture videos again, starting with lecture 5.  I created my p4 Laravel application following the examples and code provided for foobooks. There is no outside code, all the code in this application is based on the examples provided in class. 
 
-Outside Plugins:  None
-Outside Libraries:  None
-Outside Packages:  None
-Outside Code:  None
+- Outside Plugins:  None
+- Outside Libraries:  None
+- Outside Packages:  None
+- Outside Code:  None
 
