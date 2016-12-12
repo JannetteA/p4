@@ -1,18 +1,87 @@
 ﻿/* Project 4 - Final  */
 
 
+/* ------- MAIN CONTENT ------- */
 header	{
 		width: 1000px;
 		background-color: white;
 		margin: auto;
 		padding-top: 25px;
 		padding-bottom: 20px;
-		text-align: center;
+		text-align: left;
 }
+
+body {
+		font-family: Tahoma, Geneva, sans-serif;
+       	font-size: 85%;
+   		line-height: 1em;
+		background-color: #e6e6e6; 
+}
+
+section	{
+		margin-top: 0px;
+		padding-top: 0px;
+}
+
+span 	{
+		display: block;
+		margin-top: 20px;
+}
+
+footer 	{
+		font-size: 80%;
+		text-align: center;
+		padding-bottom: 30px;
+}
+
+p 		{
+		padding-left: 30px;
+		padding-right: 30px;
+		line-height: 1.1em;
+  		font-size: 110%;
+}
+
+h2
+		{
+		font-size: 120%;
+		color: gray;
+}
+
+h3		{
+		font-size: 170%;
+		padding-left: 10px;
+		color: #86b300;
+		font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+}
+
+button {
+		margin-top: 30px;
+		margin-bottom: 50px;
+}
+
+.container  {
+		width: 1000px;   
+		min-height: 750px;
+		margin: auto;
+		margin-top: 0px;
+		padding-top: 0px;
+		background-color: white;
+		color: #666666;
+ }
+
+.content {
+ 		padding-top: 40px;
+ 		padding-left: 100px;
+ 		text-align: left;
+ 		background-color: white;
+		color: #666666;
+ }
+
+/* ------- NAVIGATION ------- */
 
 nav		{
 		margin: auto;
-		text-align: center;
+		text-align: left;
 		padding-top: 20px;
 		width: 1000px;
 		background-color: #ffcccc;
@@ -20,7 +89,8 @@ nav		{
 }
 
 nav a   {
-		padding-right: 40px;
+		margin-right: 60px;
+		padding-left: 45px;
 }
 
 a 		{
@@ -38,67 +108,6 @@ a:active {
 		text-decoration: none;
 }
 
-
-body {
-		font-family: Tahoma, Geneva, sans-serif;
-       	font-size: 85%;
-   		line-height: 1em;
-		background-color: #e6e6e6; 
-}
-
-
-.container  {
-		width: 1000px;   
-		min-height: 750px;
-		margin: auto;
-		margin-top: 0px;
-		padding-top: 0px;
-		background-color: white;
-		color: #666666;
- }
-
- .content {
- 		padding-top: 40px;
- 		text-align: center;
- }
-
- .formcontent {
- 		padding-top: 40px;
- 		padding-left: 100px;
- 		text-align: left;
- }
-
-section	{
-		margin-top: 0px;
-		padding-top: 0px;
-}
-
-footer 	{
-		font-size: 80%;
-		text-align: center;
-		padding-bottom: 30px;
-}
-
-.itemimgsize  {
-	    height: 15%;
-    	width: 15%;
-}
-
-h3		{
-		font-size: 90%;
-}
-
-p 		{
-		padding-left: 30px;
-		padding-right: 30px;
-}
-
-
-.error  {
-		color: red;
-		font-size: 80%;
-}
-
 ul      {
 		list-style-type: none;
 		color: red;
@@ -109,6 +118,30 @@ li      {
 		color: red;
 }
 
+/* ------- AUTH PAGES ------- */
+
+.logincontent {
+ 		margin-left: 200px;
+ 		margin-right: 200px;
+ 		background-color: white;
+		color: #666666;
+}
+
+.formbox  {
+	 	padding-top: 40px;
+	 	padding-left: 40px;
+	 	border: solid gray 1px;
+	 	background-color: white;
+		color: #666666;
+}
+
+.login {
+		padding-left: 40px;
+		padding-top: 50px;
+}
+
+
+/* ------- INPUT FORMS ------- */
 
 .form-group {
 		text-align: left;
@@ -116,96 +149,168 @@ li      {
 		padding-bottom: 10px;
 }
 
+.formcontent {
+ 		padding-top: 20px;
+ 		padding-left: 100px;
+ 		text-align: left;
+ 		padding-bottom: 60px;
+}
 
 label {
-    margin-top:10px;
-    margin-bottom:0;
-    display:block;
-    font-size:1em;
-    font-weight:bold;
+	    margin-top:10px;
+	    margin-bottom:0;
+	    display:block;
+	    font-size:1em;
+	    font-weight:bold;
 }
 
 fieldset label {
-    margin-top:0px;
+    	margin-top:0px;
 }
 
 legend {
-    margin-bottom:5px;
-    border-bottom:0px;
+	    margin-bottom:5px;
+	    border-bottom:0px;
 }
 
 .checkboxLabel, .radioLabel {
-    display:inline;
-}
-
-.form-instructions {
-    margin:5px 0px;
-    color:grey;
+    	display:inline;
 }
 
 input[type=text],input[type=password],select {
-    width:275px;
-
+    	width:275px;
 }
 
 .flash_message {
-    width: 997px;
-    text-align:center;
-    padding:5px;
-    background-color:yellow;
-	margin: auto;
-	margin-top: 0px;
-	padding-top: 0px;
-	position: fixed;
+	    text-align:center;
+	    padding:5px;
+	    background-color:#86b300;
+	    color: white;
+	    font-size: 110%;
+		margin: auto;
+		margin-top: 0px;
+		padding-top: 0px;
+		width: 100%;
+		position: fixed;
 }
 
-/* clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.error  {
+		color: red;
+		font-size: 80%;
 }
 
-.cf:after {
-    clear: both;
+
+/* ------- SHOW ITEMS ------- */
+
+
+.item   {
+	    border: 1px solid #ccc;
+	    margin-right:100px;
+	    height:150px;
 }
 
-.cf {
-    *zoom: 1; /* For IE 6/7 only */
+#itemshow {
+    	height:520px;
 }
-/* End clearfix */
 
-.item {
-    border:1px solid #ccc;
-    margin-right:10px;
-    margin-bottom:10px;
-    float:left;
-    padding:10px;
-    height:300px;
-    width:25%;
-    min-width:250px;
+.index {
+		padding-left: 40px;
+}
+
+.imgsizelarge  {
+	    max-height: 450px;
+	    padding-top: 10px;
+	    margin-left: 10px;
+}
+
+.imgsizesmall {
+		height: 90%;
+		padding-top: 10px;
+}
+	    
+
+.leftbox {
+		float: left;
+		width: 25% ;
+		height: 150px;
+		text-align: center;
+}
+
+.rightbox {
+	  	float: right;
+	 	width: 70% ;
+	 	height:150px;
+	  	text-align: left;
+
+}
+#leftboxshow {
+	  	float: left;
+	 	width: 35%;
+	  	height: 600px;
+	  	text-align: right;
+	  	padding-right: 10px;
+}
+
+#rightboxshow {
+	 	float: right;
+	  	width: 60%;
+	  	height: 600px;
+	  	text-align: center;
+	  	background-color: #ebebe0;
+}
+
+#leftboxwelcome {
+	  	float: left ;
+	  	width: 35% ;
+	  	height: 580px;
+	  	text-align: left;
+	  	padding-top: 20px;
+	  	padding-left: 10px;
+	  	line-height: 14px;
+	  	background-color: #ebebe0;
+}
+
+#rightboxwelcome {
+	  	float: right ;
+	  	width: 60% ;
+	  	height:150px;
+	  	padding-right: 35px;
+	  	text-align: right;
 }
 
 .tags {
-    margin-top:3px;
+    	margin-top:3px;
 }
 
 .tag {
-    background-color:#eee;
-    margin-bottom:5px;
-    display:inline-block;
-    padding:3px;
-    text-transform: uppercase;
-    font-size:.7em;
+	    background-color:#eee;
+	    margin-bottom:5px;
+	    display:inline-block;
+	    padding:3px;
+	    text-transform: uppercase;
+	    font-size:.7em;
 }
 
-.truncate {
-    width:100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.button_space {
+		margin-top: 20px;
+		margin-bottom: 40px;
 }
 
-.cover {
-    width:100px;
+.delete  {
+		color: red;
 }
+
+.delete_msg  {
+		font-size: 120%;
+}
+
+.cancel  {
+		margin-top: 20px;
+		padding-bottom: 20px;
+}
+
+.space {
+		margin-top: 30px;
+		margin-bottom: 30px;
+}
+

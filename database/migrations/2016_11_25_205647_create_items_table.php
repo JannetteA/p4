@@ -29,8 +29,6 @@ class CreateItemsTable extends Migration
         $table->string('material')->nullable(); 
         $table->decimal('estimated_price');
         $table->string('image_link')->nullable(); 
-
-      
     });
 }
 

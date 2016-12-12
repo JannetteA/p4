@@ -15,34 +15,27 @@
 
 <body>
 
-
     @if(Session::get('flash_message') != null)
         <div class='flash_message'> {{Session::get('flash_message') }} </div>
     @endif
 
-
     <header>
-        <a href='/items'>
+        <a href='/'>
         <img src="/css/logo.png" alt="Logo"></a>
     </header>
 
-    <!--<a href="../pagename">Link Label</a>-->
-
-
-   <nav>
-        
+        <nav>
             @if(Auth::check())
-                <a href='/'>Main</a>
-                <a href='/items/create'>Add a new clothing item</a>
                 <a href='/logout'>Log out</a>
+                <a href='/items/create'>Add a new clothing item</a>
+                <a href='/'>View my entire closet!</a>
             @else
-                <a href='/'>Main</a>
                 <a href='/login'>Log in</a>
                 <a href='/register'>Register</a>
+                <a href='/'>View my entire closet!</a>
             @endif
        
-    </nav>
-
+        </nav>
 
     <section>
         @yield('content')

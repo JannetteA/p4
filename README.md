@@ -16,7 +16,15 @@ The project must meet the following criteria:
 
 
 ## Link to Planning Document
-To be added
+https://docs.google.com/document/d/1Zc5gwN4LJ59-6lyivzGeSDKYRy7rDGb0L41pHAXj90E/edit
+
+
+
+## Where are the 4 CRUD Operations in Action
+Create:  When you click the "Add a clothing item" navigation option
+Read: When you click "View Details" after selecting the "View my entire closet" navigation option
+Udpate: When you click "Edit" after selecting "View my entire closet" or selecting "View Details"
+Delete:  When you click "Delete" after selecting "View my entire closet" or selecting "View Details"
 
 
 ## Demo
@@ -28,5 +36,10 @@ To be added
 
 
 ## Outside code
-In order to create this application, I watched all the lecture videos again, starting with lecture 5.  I created my p4 Laravel application and I followed the videos step by step to build the application for p4.  
+In order to create this application, I watched all the lecture videos again, starting with lecture 5.  I created my p4 Laravel application and I followed the videos step by step to build the application for p4. 
+
+Outside Plugins:  None
+Outside Libraries:  None
+Outside Packages:  None
+Outside Code:  None
 

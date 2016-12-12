@@ -39,5 +39,4 @@ public function down()
             $table->dropColumn('brand_id');
         });
     }
-
 }

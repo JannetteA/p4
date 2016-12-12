@@ -10,22 +10,30 @@
 
 		<div class="content">
 	
-			<h1>Confirm deletion</h1>
+			<h2 class="delete">Please Confirm Deletion</h2>
 
-		    <form method='POST' action='/items/{{ $item->id }}'>
+			    <form method='POST' action='/items/{{ $item->id }}'>
+			        {{ method_field('DELETE') }}
+			        {{ csrf_field() }}
+			        <span>Are you sure you want to delete the item "<em>{{ $item->description }}</em>?"</span>
+			        <input class="button_space" type='submit' value='Yes'>
+			    </form>
 
-		        {{ method_field('DELETE') }}
+		    <div> 
+		    	<form action='/items/{{ $item->id }}/edit' method="get">
+			    	<input type="submit" value="Cancel deletion and edit item" 
+			         name="Submit" id="submit2" />
+				</form>
+ 			</div>
 
-		        {{ csrf_field() }}
+ 			<div> 
+				<form action='/items' method="get">
+			    	<input type="submit" value="Cancel deletion and view all items" 
+			         name="Submit" id="submit3" />
+				</form>
+		    </div>
 
-		        <h2>Are you sure you want to delete <em>{{ $item->description }}</em>?</h2>
-
-		        <input type='submit' value='Yes'>
-		        
-		    </form>
-		    
 		</div>
-
     </div>
 
 @endsection

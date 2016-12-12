@@ -17,11 +17,9 @@ class CreateBrandsTable extends Migration
 
             $table->increments('id');
             $table->timestamps();
-
             $table->string('brand_name');
             $table->string('store');
             $table->string('store_location');
-
         });
     }
 
@@ -34,8 +32,4 @@ class CreateBrandsTable extends Migration
     {
         Schema::drop('brands');
     }
-
-  
-
-
 }

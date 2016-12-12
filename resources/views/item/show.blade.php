@@ -6,34 +6,25 @@
 	
 @section('content')
 
-	
 	<div class="container">
-		
 		<div class="content">
+			<div id="itemshow">
 
-				<h1>{{ $item->description }}</h1>
-				
-				<!-- need to get brand  -->
+			   	<div id=leftboxshow>
+					<h2>{{ $item->description }}</h2>	
+         			<span>Purchased Year: <em>{{ $item->purchased_year }}</em></span>
+         			<span>Price: <em>{{ $item->estimated_price }}</em></span>
+         			<span>Material: <em>{{ $item->material }}</em></span>
+			   	</div>
 
-
-				<img src='{{ $item->image_link }}'>
-
-				<div >
-			        @foreach($item->tags as $tag)
-			            <div>{{ $tag->name }}</div>
-			        @endforeach
-			    </div>
-
-			    <a class='button' href='/items/{{ $item->id }}/edit'>Edit</a>
-			    <a class='button' href='/items/{{ $item->id }}/delete'>Delete</a>
-
-			    <br><br>
-			    <a class='return' href='/items'>&larr; Return to all items</a>
-
-			    			    
-
-	    </div>
-	
+			   	<div id=rightboxshow>
+				   	<span><img class="imgsizelarge" src='{{ $item->image_link }}' alt="Clothing Item"/></span>
+				   	<span><a  href='/items/{{ $item->id }}/edit'>Edit</a></span>
+		            <span><a  href='/items/{{ $item->id }}/delete'>Delete</a></span>
+			   	</div>
+			   	
+	   		</div>
+		</div>
     </div>
 
 @endsection

@@ -4,13 +4,9 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
+| This file defines all the routes that are handled by thue application.
+| We are telling Laravel the URIs it should respond to using a Closure or controller method.
 */
-
 
 Route::get('/items', 'ItemController@index')->name('items.index')->middleware('auth');
 Route::get('/items/create', 'ItemController@create')->name('items.create')->middleware('auth');
@@ -21,8 +17,12 @@ Route::put('/items/{id}', 'ItemController@update')->name('items.update');
 Route::get('/items/{id}/delete', 'ItemController@delete')->name('items.destroy');
 Route::delete('/items/{item}', 'ItemController@destroy')->name('items.destroy');
 
-
-
+/*
+|--------------------------------------------------------------------------
+| Database Connection Test Route
+|--------------------------------------------------------------------------
+| This route is only used to test connection to the database
+*/
 
 Route::get('/debug', function() {
 
@@ -59,11 +59,30 @@ Route::get('/debug', function() {
 
 });
 
+
+/*
+|--------------------------------------------------------------------------
+| welcome Route
+|--------------------------------------------------------------------------
+| This route is used to redirect to the welcome page
+*/
 Route::get('/', 'PageController@welcome');
 
-#Generates a lot of routes
+/*
+|--------------------------------------------------------------------------
+| Authentication Routes
+|--------------------------------------------------------------------------
+| This entry generates a lot of routes for authentication
+*/
 Auth::routes();
-#This overwrites the previous line, takes precedence
+
+/*
+|--------------------------------------------------------------------------
+| Authentication Routes
+|--------------------------------------------------------------------------
+| This overwrites the previous line and it will take precedence
+*/
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
-#Route::get('/home', 'HomeController@index');
+
+

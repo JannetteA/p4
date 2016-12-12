@@ -16,7 +16,8 @@ class UsersTableSeeder extends Seeder
         $users = [
             ['jill@harvard.edu','jill','helloworld'], # <-- Required for P4
             ['jamal@harvard.edu','jamal','helloworld'], # <-- Required for P4
-            ['susanbuck@fas.harvard.edu','susan','helloworld'] # <-- Update with your own info, or remove
+            ['atilesj@msn.com','jannette','helloworld'] # <-- Update with your own info, or remove
+
         ];
         # Get existing users to prevent duplicates
         $existingUsers = User::all()->keyBy('email')->toArray();
@@ -31,5 +32,4 @@ class UsersTableSeeder extends Seeder
             }
         }
     }
-
 }
