@@ -20,10 +20,11 @@ https://docs.google.com/document/d/1Zc5gwN4LJ59-6lyivzGeSDKYRy7rDGb0L41pHAXj90E/
 
 
 ## Where are the 4 CRUD Operations in Action
-Create:  When you click the "Add a clothing item" navigation option
-Read: When you click "View Details" after selecting the "View my entire closet" navigation option
-Udpate: When you click "Edit" after selecting "View my entire closet" or selecting "View Details"
-Delete:  When you click "Delete" after selecting "View my entire closet" or selecting "View Details"
+
+- Create:  When you click the "Add a clothing item" navigation option
+- Read: When you click "View Details" after selecting the "View my entire closet" navigation option
+- Udpate: When you click "Edit" after selecting "View my entire closet" or selecting "View Details"
+- Delete:  When you click "Delete" after selecting "View my entire closet" or selecting "View Details"
 
 
 ## Demo Video
