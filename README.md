@@ -10,14 +10,13 @@ The final project brings together all the skills we learned throughout the semes
 The project must meet the following criteria:
 
 - Uses PHP/Laravel.
-- Uses a database with at least 2 tables. 
-- Demonstrates all 4 CRUD interactions (user signup/login does not count towards this).
+- Uses a database with at least two tables. 
+- Demonstrates all four CRUD interactions.
 - Demonstrates server-side error validation.
 
 
 ## Link to Planning Document
 https://docs.google.com/document/d/1Zc5gwN4LJ59-6lyivzGeSDKYRy7rDGb0L41pHAXj90E/edit
-
 
 
 ## Where are the 4 CRUD Operations in Action
@@ -27,16 +26,22 @@ Udpate: When you click "Edit" after selecting "View my entire closet" or selecti
 Delete:  When you click "Delete" after selecting "View my entire closet" or selecting "View Details"
 
 
-## Demo
-To be added
+## Demo Video
+http://www.screencast.com/t/a7mDGoqzg3o
 
 
 ## Details for Teaching Team
-To be added 
+This website requires credentials.  The following credentials are being used for the teaching staff:
+
+email:  jill@harvard.edu
+password:  helloworld
+
+email:  jamal@harvard.edu
+password:  helloworld
 
 
 ## Outside code
-In order to create this application, I watched all the lecture videos again, starting with lecture 5.  I created my p4 Laravel application and I followed the videos step by step to build the application for p4. 
+In order to create this application, I watched all the lecture videos again, starting with lecture 5.  I created my p4 Laravel application following the examples and code provided for foobooks. There is no outside code, all the code in this application is based on the examples provided in class. 
 
 Outside Plugins:  None
 Outside Libraries:  None
